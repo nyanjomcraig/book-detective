@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-card">
+        <h1>Midnight Library</h1>
+        <div id="reader"></div>
+        
+        <div class="manual-input">
+            <input type="text" id="manualIsbn" placeholder="Enter ISBN-13 manually">
+            <button onclick="manualAdd()">Add Book</button>
+        </div>
+        
+        <div id="result">Ready to scan...</div>
+        <div id="bookList"></div>
+    </div>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+body { background: #0B0F1C; color: white; font-family: 'Inter', sans-serif; display: flex; justify-content: center; padding: 20px; margin: 0; }
+.glass-card { background: rgba(26, 31, 47, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 20px; width: 100%; max-width: 400px; }
+#reader { width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
+.manual-input { display: flex; gap: 5px; margin-bottom: 15px; }
+input { flex: 1; padding: 10px; border-radius: 8px; border: none; background: #1A1F2F; color: white; }
+button { padding: 10px; background: #6C5CE7; color: white; border: none; border-radius: 8px; cursor: pointer; }
+.book-item { background: rgba(255,255,255,0.05); padding: 10px; margin-bottom: 8px; border-left: 4px solid #00D2FF; border-radius: 4px; }
+h1 { font-size: 1.5rem; text-align: center; }
