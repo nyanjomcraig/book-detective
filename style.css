@@ -1,8 +1,15 @@
-body { background: #0B0F1C; color: white; font-family: 'Inter', sans-serif; display: flex; justify-content: center; padding: 20px; margin: 0; }
-.glass-card { background: rgba(26, 31, 47, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 20px; width: 100%; max-width: 400px; }
-#reader { width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
-.manual-input { display: flex; gap: 5px; margin-bottom: 15px; }
-input { flex: 1; padding: 10px; border-radius: 8px; border: none; background: #1A1F2F; color: white; }
-button { padding: 10px; background: #6C5CE7; color: white; border: none; border-radius: 8px; cursor: pointer; }
-.book-item { background: rgba(255,255,255,0.05); padding: 10px; margin-bottom: 8px; border-left: 4px solid #00D2FF; border-radius: 4px; }
-h1 { font-size: 1.5rem; text-align: center; }
+:root { --bg: #0b0e14; --card: rgba(20, 26, 38, 0.7); --accent: #6c5ce7; --cyan: #00d2ff; }
+body { background: radial-gradient(circle at 50% 0%, #1a1f2e, var(--bg)); color: #fff; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; justify-content: center; padding: 20px; margin: 0; }
+.glass-card { background: var(--card); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 2rem; width: 100%; max-width: 450px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+#reader { border: 2px solid var(--accent); border-radius: 20px; overflow: hidden; box-shadow: 0 0 20px rgba(108, 92, 231, 0.3); margin-bottom: 20px; }
+/* Dashboard Stats */
+.dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.stat-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+.stat-card h3 { font-size: 0.65rem; color: var(--cyan); margin: 0; text-transform: uppercase; }
+.stat-card p { font-size: 1.2rem; margin: 5px 0 0; font-weight: bold; }
+/* Form/List */
+.manual-input { display: flex; gap: 10px; margin-bottom: 20px; }
+input { flex: 1; padding: 12px; border-radius: 12px; border: none; background: #0b0e14; color: white; border: 1px solid #333; }
+button { background: linear-gradient(45deg, var(--accent), var(--cyan)); border: none; padding: 12px 20px; border-radius: 12px; color: white; font-weight: bold; cursor: pointer; }
+.book-item { background: rgba(255,255,255,0.05); margin: 10px 0; padding: 15px; border-radius: 16px; display: flex; align-items: center; gap: 15px; border-left: 4px solid var(--cyan); }
+.book-item img { width: 50px; border-radius: 8px; }

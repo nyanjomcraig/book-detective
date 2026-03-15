@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="glass-card">
         <h1>Midnight Library</h1>
+        <div id="stats"></div> <!-- NEW: Stats Dashboard -->
         <div id="reader"></div>
-        
         <div class="manual-input">
-            <input type="text" id="manualIsbn" placeholder="Enter ISBN-13 manually">
-            <button onclick="manualAdd()">Add Book</button>
+            <input type="text" id="manualIsbn" placeholder="Enter ISBN-13...">
+            <button id="addManualBtn">Add</button>
         </div>
-        
         <div id="result">Ready to scan...</div>
         <div id="bookList"></div>
     </div>
     <script src="https://unpkg.com/html5-qrcode"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
+    <script>
+        function handleScan(decodedText) { window.processIsbn(decodedText); }
+        document.getElementById('addManualBtn').addEventListener('click', () => {
+            const val = document.getElementById('manualIsbn').value;
+            window.processIsbn(val);
+        });
+    </script>
 </body>
 </html>
