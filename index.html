@@ -11,7 +11,7 @@
 <body>
     <div class="glass-card">
         <h1>Midnight Library</h1>
-        <div id="stats"></div> <!-- NEW: Stats Dashboard -->
+        <div id="stats"></div>
         <div id="reader"></div>
         <div class="manual-input">
             <input type="text" id="manualIsbn" placeholder="Enter ISBN-13...">
@@ -22,12 +22,5 @@
     </div>
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script type="module" src="app.js"></script>
-    <script>
-        function handleScan(decodedText) { window.processIsbn(decodedText); }
-        document.getElementById('addManualBtn').addEventListener('click', () => {
-            const val = document.getElementById('manualIsbn').value;
-            window.processIsbn(val);
-        });
-    </script>
 </body>
 </html>
